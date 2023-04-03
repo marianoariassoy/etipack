@@ -1,0 +1,29 @@
+//General
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+//Slider
+.home-img {
+  height: 50vh;
+  object-fit: cover;
+}
+.banner {
+  height: 38vh;
+}
+#banner-multipagina {
+  background-image: url("https://images.unsplash.com/photo-1543123452-278551b0e9a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+  background-blend-mode: multiply;
+  background-color: #999;
+  // background-image: url(../assets/bg1.jpg);
+}
+#banner-about {
+  background-image: url("https://images.unsplash.com/photo-1621072145476-7c50a88739c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-blend-mode: multiply;
+  background-color: #999;
+}
+
+.btn {
+  display: inline-flex;
+}
