@@ -38,7 +38,10 @@ const Etiquetas = () => {
         <div className="container px-6 py-24">
           <h1 className="text-3xl mb-6">¿Listo para dar la mejor imagen a tus clientes?</h1>
           <p className="mb-10 text-justify md:w-1/2">Ayudamos a empresas de distintas industrias a comunicarse de forma más efectiva con sus clientes a través de etiquetas de alto impacto visual. Iniciemos una conversación.</p>
-          <Btn text="Hablemos" />
+
+          <a href="#contacto" className="btn bg-primary text-white btn-black-hover px-10 py-4 rounded-full scroll">
+            Hablemos
+          </a>
         </div>
       </section>
     </>

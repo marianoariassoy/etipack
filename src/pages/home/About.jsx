@@ -3,7 +3,7 @@ import Btn from "../../components/Btn";
 
 const About = () => {
   return (
-    <section id="multipagina">
+    <section id="nosotros">
       <div className="container px-6 pt-10">
         <h1 className="text-3xl mb-10">SOBRE NOSOTROS</h1>
       </div>
@@ -21,7 +21,9 @@ const About = () => {
             Escuchándolos, comprendiendo sus procesos y necesidades es como mejor podemos brindarles el asesoramiento adecuado. Este vínculo nos permite desarrollar los productos que más se acerquen a las necesidades de tu compañía Iniciemos una
             conversación.
           </p>
-          <Btn text="Hablemos" />
+          <a href="#contacto" className="btn bg-primary text-white btn-black-hover px-10 py-4 rounded-full scroll">
+            Hablemos
+          </a>
         </div>
         <div className="w-full md:w-1/2">
           <img src="https://images.unsplash.com/photo-1542272606-fe889704e0f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80" className="w-full" />

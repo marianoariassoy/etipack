@@ -13,9 +13,9 @@ const Home = () => {
   return (
     <>
       <HeadProvider>
-        <Title>Etipack</Title>
-        <Link rel="canonical" href="" />
-        <Meta name="title" content="Etipack" />
+        <Title>Etipack &bull; Valoriza tu marca &bull; Etiquetas Autoadhesivas</Title>
+        {/* <Link rel="canonical" href="" /> */}
+        <Meta name="title" content="Etipack &bull; Valoriza tu marca &bull; Etiquetas Autoadhesivas" />
       </HeadProvider>
       <Slider />
       <Clients />

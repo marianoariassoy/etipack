@@ -1,5 +1,6 @@
 //Components
 import NavMenu from "./NavMenu";
+import React from "react";
 
 const NavBar = () => {
   return (
@@ -7,29 +8,29 @@ const NavBar = () => {
       <NavMenu />
 
       <div>
-        <a href="#" className="logo">
+        <a href="#home" className="logo scroll">
           <img src="./assets/logo.svg" width="300" alt="Etipack Logo" />
         </a>
       </div>
       <nav>
         <ul>
           <li>
-            <a href="#" className="btn-primary-hover px-4 py-3 rounded-full">
+            <a href="#etiquetas" className="btn-primary-hover px-4 py-3 rounded-full">
               Etiquetas Autoadhesivas
             </a>
           </li>
           <li>
-            <a href="#" className="btn-primary-hover px-4 py-3 rounded-full">
+            <a href="#multipagina" className="btn-primary-hover px-4 py-3 rounded-full">
               Etiquetas multipágina
             </a>
           </li>
           <li>
-            <a href="#" className="btn-primary-hover px-4 py-3 rounded-full">
+            <a href="#nosotros" className="btn-primary-hover px-4 py-3 rounded-full">
               Sobre Nosotros
             </a>
           </li>
           <li>
-            <a href="#" className="btn-black-hover bg-secondary text-black px-4 py-3 rounded-full">
+            <a href="#contacto" className="btn-black-hover bg-secondary text-black px-4 py-3 rounded-full">
               Contactanos
             </a>
           </li>

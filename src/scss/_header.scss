@@ -1,5 +1,7 @@
 header {
   width: 100%;
+  top: 0;
+  position: fixed;
 }
 
 .logo {
@@ -12,11 +14,12 @@ nav {
   @media (max-width: 980px) {
     display: none;
     position: absolute;
+    z-index: 10000;
     width: 100%;
     background-color: white;
     left: 0;
     top: 140px;
-    height: 100%;
+    height: 100vh;
     padding-top: 18vh;
   }
   ul {

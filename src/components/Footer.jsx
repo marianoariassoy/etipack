@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         <div className="w-full md:w-1/3 flex items-start md:items-end flex-wrap flex-col mb-6">
-          <a href="#" className="btn bg-secondary btn-primary-hover px-10 py-4 rounded-full mb-6">
+          <a href="#contacto" className="btn bg-secondary btn-primary-hover px-10 py-4 rounded-full mb-6 scroll">
             contáctanos
           </a>
           <img src="./assets/logo-white.svg" alt="Etipack Logo" className="mb-6" />

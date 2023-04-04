@@ -1,3 +1,6 @@
+//Dependencies
+// import { gsap } from "gsap";
+
 //Components
 import React from "react";
 import NavBar from "./components/NavBar";
@@ -7,7 +10,7 @@ import Footer from "./components/Footer";
 export function App() {
   return (
     <>
-      <header>
+      <header className="bg-white">
         <NavBar />
       </header>
       <main>
