@@ -13,7 +13,7 @@ const NosotrosContainer = () => {
               <div className="w-full lg:w-3/5">
                 <h1 className="text-5xl font-semibold">Dejá que tu empaque hable y eleve tu marca al siguiente nivel.</h1>
                 <p className="mb-4 text-2xl">Las etiquetas dicen mucho, comuniquá la historia de tu marca, generá confianza y destacate entre la multitud.</p>
-                <a href="#contacto" className="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold">
+                <a href="#contact" className="inline-block bg-white text-primary btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold">
                   Contactanos
                 </a>
               </div>
@@ -23,7 +23,7 @@ const NosotrosContainer = () => {
       </section>
       <section>
         <div className="container m-auto px-6 py-12">
-          <div className="row lg:flex lg:mb-20">
+          <div className="row lg:flex lg:mb-28">
             <div className="lg:w-1/2">
               <img src="./assets/images/img-1.png" alt="Imagen de una chica" className="absolute img-hero" />
             </div>
@@ -52,7 +52,7 @@ const NosotrosContainer = () => {
             Escuchándolos, compren- diendo sus procesos y necesidades es como mejor podemos brindarles el asesoramiento adecuado. Este vínculo nos permite desarrollar los productos que más se acerquen a las necesidades de tu compañía Iniciemos una
             conversación.
           </div>
-          <a href="#contacto" className="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg mt-6">
+          <a href="#contact" className="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg mt-6">
             Contactanos
           </a>
         </div>

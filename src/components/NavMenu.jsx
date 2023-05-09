@@ -1,4 +1,3 @@
-//Dependencies
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -8,8 +7,6 @@ let menuOpen = false;
 
 const NavMenu = () => {
   useEffect(() => {
-    let windowsWidth = screen.width;
-
     gsap.registerPlugin(ScrollToPlugin);
     gsap.registerPlugin(ScrollTrigger);
 
@@ -30,23 +27,6 @@ const NavMenu = () => {
         gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
       });
     });
-
-    function setActive(link) {
-      links.forEach((el) => {
-        el.classList.remove("bg-primary");
-        el.classList.remove("text-white");
-      });
-
-      link.classList.add("bg-primary");
-      link.classList.add("text-white");
-      if (windowsWidth < 980 && menuOpen) {
-        const menu = document.querySelector("nav");
-        const navMenu = document.querySelector("#nav-menu");
-        menu.classList.toggle("block");
-        navMenu.classList.toggle("active");
-        menuOpen = false;
-      }
-    }
   }, []);
 
   const OpenMenu = () => {

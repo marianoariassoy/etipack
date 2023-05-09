@@ -4,7 +4,7 @@ import NavMenu from "./NavMenu";
 const NavBar = () => {
   return (
     <div className="container m-auto flex justify-between items-center p-6">
-      <Link to="/" className="logo scroll">
+      <Link to="/" className="logo">
         <img src="./assets/images/logo.png" alt="Etipack Logo" />
       </Link>
 
@@ -27,9 +27,9 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <Link to="/contacto" className="btn-nav-contact bg-primary text-white px-8 py-2 rounded-lg hidden lg:inline">
+      <a href="#contact" className="btn-nav-contact bg-primary text-white px-8 py-2 rounded-lg hidden lg:inline scroll">
         Contactanos
-      </Link>
+      </a>
 
       <NavMenu />
     </div>

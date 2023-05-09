@@ -217,4 +217,8 @@ nav ul li {
   background-repeat: no-repeat;
   background-position: top right;
   background-image: url("../assets/images/bg-1.png");
+}
+
+.vino {
+  height: 300px;
 }/*# sourceMappingURL=main.css.map */
