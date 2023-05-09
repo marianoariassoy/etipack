@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import Layout from "../../components/Layout";
 import Clients from "../../components/Clients";
 import Image from "../../components/Image";
 import Contact from "../../components/Contact";
 
 const NosotrosContainer = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <section className="mt-28 relative">
