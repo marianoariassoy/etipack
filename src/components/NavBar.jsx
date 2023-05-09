@@ -1,41 +1,37 @@
-//Components
+import { Link, NavLink } from "react-router-dom";
 import NavMenu from "./NavMenu";
-import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="container flex justify-between items-center p-6">
-      <NavMenu />
+    <div className="container m-auto flex justify-between items-center p-6">
+      <Link to="/" className="logo scroll">
+        <img src="./assets/images/logo.png" alt="Etipack Logo" />
+      </Link>
 
-      <div>
-        <a href="#home" className="logo scroll">
-          <img src="./assets/logo.svg" width="300" alt="Etipack Logo" />
-        </a>
-      </div>
       <nav>
         <ul>
           <li>
-            <a href="#etiquetas" className="btn-primary-hover px-4 py-3 rounded-full">
-              Etiquetas Autoadhesivas
-            </a>
+            <NavLink to="/" className="btn-nav font-semibold">
+              Sobre nosotros
+            </NavLink>
           </li>
           <li>
-            <a href="#multipagina" className="btn-primary-hover px-4 py-3 rounded-full">
+            <NavLink to="/etiquetas-autoadhesivas" className="btn-nav font-semibold">
+              Etiquetas autoadhesivas
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/etiquetas-multipagina" className="btn-nav font-semibold">
               Etiquetas multipágina
-            </a>
-          </li>
-          <li>
-            <a href="#nosotros" className="btn-primary-hover px-4 py-3 rounded-full">
-              Sobre Nosotros
-            </a>
-          </li>
-          <li>
-            <a href="#contacto" className="btn-black-hover bg-secondary text-black px-4 py-3 rounded-full">
-              Contactanos
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
+      <Link to="/contacto" className="btn-nav-contact bg-primary text-white px-8 py-2 rounded-lg hidden lg:inline">
+        Contactanos
+      </Link>
+
+      <NavMenu />
     </div>
   );
 };
