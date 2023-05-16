@@ -5,11 +5,21 @@ import Image from "../../components/Image";
 import Contact from "../../components/Contact";
 import Slider from "../../components/Slider";
 import { Helmet } from "react-helmet";
+import { useLottie } from "lottie-react";
+import multilabel from "./multilabel.json";
 
 const MultipaginasContainer = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const options = {
+    animationData: multilabel,
+    loop: true,
+    style: { width: "200px" },
+  };
+  const { View } = useLottie(options);
+
   return (
     <Layout>
       <Helmet>
@@ -52,8 +62,8 @@ const MultipaginasContainer = () => {
         </div>
       </section>
       <section>
-        <div className="container m-auto p-6 lg:flex justify-between items-start">
-          <div className="lg:w-3/5">
+        <div className="container m-auto p-6 lg:flex justify-between items-center">
+          <div className="lg:w-4/6">
             <h1 className="text-4xl font-semibold mb-6">Etiquetas autoadhesivas multipágina</h1>
             <p className="text-xl mb-6">
               La información importante ha de ser accesible y fácil de entender incluso cuando el espacio es limitado. Con las etiquetas multipágina es posible compartir información con su cliente, de la manera que usted desee, con las mínimas
@@ -63,9 +73,7 @@ const MultipaginasContainer = () => {
               Conocé más
             </a>
           </div>
-          <div className="hidden lg:inline">
-            <img src="./assets/images/medicine1.png" className="vino" />
-          </div>
+          <div className="hidden w-4/12 lg:flex justify-center">{View}</div>
         </div>
       </section>
       <Slider />

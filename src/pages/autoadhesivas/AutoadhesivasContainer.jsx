@@ -5,11 +5,22 @@ import Image from "../../components/Image";
 import Contact from "../../components/Contact";
 import Slider from "../../components/Slider";
 import { Helmet } from "react-helmet";
+import { useLottie } from "lottie-react";
+import vino from "./vino.json";
 
 const AutoadhesivasContainer = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const options = {
+    animationData: vino,
+    loop: true,
+    autoplay: true,
+    style: { width: "150px" },
+  };
+  const { View } = useLottie(options);
+
   return (
     <Layout>
       <Helmet>
@@ -58,17 +69,15 @@ const AutoadhesivasContainer = () => {
         </div>
       </section>
       <section>
-        <div className="container m-auto p-6 lg:flex justify-between items-start">
-          <div className="lg:w-3/5">
+        <div className="container m-auto p-6 lg:flex justify-between items-center">
+          <div className="lg:w-4/6">
             <h1 className="text-4xl font-semibold mb-6">Etiquetas autoadhesivas en bobina</h1>
             <p className="text-xl mb-6">Hay determinados sectores en los que la importancia de la etiqueta es mayor, ya que además de ofrecer una información, aporta un diseño y una imagen que es decisiva en un primer momento a la hora de elegir.</p>
             <a href="#contact" className="inline-block bg-primary text-white btn-nav-contact px-8 py-2 rounded-lg scroll hover:shadow-lg font-semibold">
               Conocé más
             </a>
           </div>
-          <div className="hidden lg:inline">
-            <img src="./assets/images/vino2.png" className="vino" />
-          </div>
+          <div className="hidden w-4/12 lg:flex justify-center">{View}</div>
         </div>
       </section>
       <Slider />
