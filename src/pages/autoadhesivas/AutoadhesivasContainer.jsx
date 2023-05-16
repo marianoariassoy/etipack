@@ -5,7 +5,7 @@ import Image from "../../components/Image";
 import Contact from "../../components/Contact";
 import Slider from "../../components/Slider";
 import { Helmet } from "react-helmet";
-import { useLottie } from "lottie-react";
+import Lottie from "lottie-react";
 import vino from "./vino.json";
 
 const AutoadhesivasContainer = () => {
@@ -13,13 +13,30 @@ const AutoadhesivasContainer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const options = {
-    animationData: vino,
-    loop: true,
-    autoplay: true,
-    style: { width: "150px" },
+  const style = {
+    width: 150,
   };
-  const { View } = useLottie(options);
+
+  const interactivity = {
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0, 0.2],
+        type: "stop",
+        frames: [0],
+      },
+      {
+        visibility: [0.2, 0.45],
+        type: "seek",
+        frames: [0, 45],
+      },
+      {
+        visibility: [0.45, 1.0],
+        type: "seek",
+        frames: [45, 60],
+      },
+    ],
+  };
 
   return (
     <Layout>
@@ -77,7 +94,9 @@ const AutoadhesivasContainer = () => {
               Conocé más
             </a>
           </div>
-          <div className="hidden w-4/12 lg:flex justify-center">{View}</div>
+          <div className="hidden w-4/12 lg:flex justify-center">
+            <Lottie animationData={vino} style={style} interactivity={interactivity} />
+          </div>
         </div>
       </section>
       <Slider />

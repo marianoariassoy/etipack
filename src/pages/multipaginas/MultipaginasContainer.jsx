@@ -5,7 +5,7 @@ import Image from "../../components/Image";
 import Contact from "../../components/Contact";
 import Slider from "../../components/Slider";
 import { Helmet } from "react-helmet";
-import { useLottie } from "lottie-react";
+import Lottie from "lottie-react";
 import multilabel from "./multilabel.json";
 
 const MultipaginasContainer = () => {
@@ -13,12 +13,30 @@ const MultipaginasContainer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const options = {
-    animationData: multilabel,
-    loop: true,
-    style: { width: "200px" },
+  const style = {
+    width: 250,
   };
-  const { View } = useLottie(options);
+
+  const interactivity = {
+    mode: "scroll",
+    actions: [
+      {
+        visibility: [0, 0.2],
+        type: "stop",
+        frames: [0],
+      },
+      {
+        visibility: [0.2, 0.45],
+        type: "seek",
+        frames: [0, 45],
+      },
+      {
+        visibility: [0.45, 1.0],
+        type: "seek",
+        frames: [45, 160],
+      },
+    ],
+  };
 
   return (
     <Layout>
@@ -73,7 +91,9 @@ const MultipaginasContainer = () => {
               Conocé más
             </a>
           </div>
-          <div className="hidden w-4/12 lg:flex justify-center">{View}</div>
+          <div className="hidden w-4/12 lg:flex justify-center">
+            <Lottie animationData={multilabel} style={style} interactivity={interactivity} />
+          </div>
         </div>
       </section>
       <Slider />
